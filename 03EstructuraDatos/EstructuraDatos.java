@@ -1,4 +1,3 @@
-
 /**
  *Vamos a crear un programa que se encargue de realizar las siguientes operaciones
 
@@ -26,7 +25,7 @@ class EstructuraDatos {
         Scanner entrada = new Scanner(System.in);
 
         //
-        int edad, opcion, socio, numbinario, total, numerototal, n, a, b;
+        int edad, opcion, socio, numbinario, total, numerototal, n;
         int positivos = 0;
         double precio, bono;
         char letras, operacion;
@@ -122,6 +121,35 @@ class EstructuraDatos {
                 case 12:
                     break;
                 case 13:
+                    // Calculadora
+                    System.out.println("Ingresa el primer numero");
+                    int a = entrada.nextInt();
+                    System.out.println("Ingresa el segundo numero");
+                    int b = entrada.nextInt();
+                    System.out.println("Ingresa el tipo de operacion");
+                    char ope = entrada.next().charAt(0);
+                    switch (ope) {
+                        case '+':
+                            resultado = a + b;
+                            System.out.println("La suma es de " + resultado);
+                            break;
+                        case '-':
+                            resultado = a - b;
+                            System.out.println("La resta es de " + resultado);
+                            break;
+                        case '*':
+                            resultado = a * b;
+                            System.out.println("El producto es de " + resultado);
+                            break;
+                        case '/':
+                            if (b != 0) {
+                                resultado = a / b;
+                                System.out.println("La suma es de " + resultado);
+                            }
+                            break;
+                        default:
+                            System.out.println("Operacion no valida :v");
+                    }
                     break;
                 case 14:
                     break;
